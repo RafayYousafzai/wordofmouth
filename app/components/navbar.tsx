@@ -104,7 +104,7 @@ export default function NavigationBar() {
             {theme === "dark" ? (
               <Sun size={18} className="text-[#FFC94A]" />
             ) : (
-              <Moon size={18} className="text-[#000]" />
+              <Moon size={18} className="text-[#FFC94A]" />
             )}
           </Button>
         </NavbarItem>
