@@ -1,16 +1,15 @@
-import "@/styles/globals.css";
+import type React from "react";
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "@/styles/globals.css";
 import { Providers } from "./providers";
-import { fontSans } from "@/config/fonts";
-import clsx from "clsx";
-import { ToastProvider } from "@/components/toast-provider";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ELS System",
-  description: "Developed by Muhammad Ahmad",
-  icons: {
-    icon: "/logo.png", // Path to your favicon relative to the public directory
-  },
+  title: "Word of Mouth Foodie - Discover Food Through Friends",
+  description:
+    "Follow friends, share your meals, and explore dishes near you — all in one social food app.",
 };
 
 export default function RootLayout({
@@ -19,12 +18,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={clsx("font-sans antialiased", fontSans.className)}>
-        <Providers>
-          {children}
-          <ToastProvider />
-        </Providers>
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
