@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { Button, Card, CardBody } from "@nextui-org/react"
-import { Download, Smartphone } from "lucide-react"
-import Image from "next/image"
+import { Button, Card, CardBody } from "@nextui-org/react";
+import { Download, Smartphone } from "lucide-react";
+import Image from "next/image";
 
 export default function DownloadCTA() {
   return (
@@ -11,10 +11,12 @@ export default function DownloadCTA() {
         <Card className="shadow-2xl">
           <CardBody className="p-12 text-center space-y-8">
             <div className="space-y-4">
-              <h2 className="text-3xl md:text-5xl font-bold text-black">Ready to Taste the City?</h2>
-              <p className="text-lg text-black/80 max-w-2xl mx-auto">
-                Join thousands of food lovers already using Word of Mouth to discover amazing meals and connect with
-                friends.
+              <h2 className="text-3xl md:text-5xl font-bold ">
+                Ready to Taste the City?
+              </h2>
+              <p className="text-lg  max-w-2xl mx-auto">
+                Join thousands of food lovers already using Word of Mouth to
+                discover amazing meals and connect with friends.
               </p>
             </div>
 
@@ -29,7 +31,7 @@ export default function DownloadCTA() {
               <Button
                 size="lg"
                 variant="bordered"
-                className="border-black text-black hover:bg-black/10 px-8"
+                className="border-black  hover:bg-black/10 px-8"
                 startContent={<Smartphone size={20} />}
               >
                 Get it on Google Play
@@ -37,7 +39,7 @@ export default function DownloadCTA() {
             </div>
 
             <div className="pt-8">
-              <p className="text-black/60 mb-4">Scan to download</p>
+              <p className=" mb-4">Scan to download</p>
               <div className="inline-block p-4 bg-white rounded-2xl shadow-lg">
                 <Image
                   src="/placeholder.svg?height=120&width=120"
@@ -52,5 +54,5 @@ export default function DownloadCTA() {
         </Card>
       </div>
     </section>
-  )
+  );
 }
