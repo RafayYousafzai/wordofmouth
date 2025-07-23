@@ -61,7 +61,7 @@ export default function NavigationBar() {
           <div className="flex items-center gap-3 group cursor-pointer">
             <div className="relative">
               <Image
-                src="/logo.png"
+                src="/icon.png"
                 alt="WOM Logo"
                 className="w-16 h-16 rounded-xl shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105"
               />
