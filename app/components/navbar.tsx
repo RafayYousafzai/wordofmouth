@@ -67,7 +67,7 @@ export default function NavigationBar() {
               />
               <div className="absolute -inset-1 bg-gradient-to-r from-[#FFC94A] to-[#FFD700] rounded-xl blur opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
             </div>
-            <div className="flex flex-col">
+            <div className="sm:flex hidden flex-col">
               <p className="font-bold text-xl bg-gradient-to-r from-[#FFC94A] via-[#FFD700] to-[#FFC94A] bg-clip-text text-transparent">
                 WOM
               </p>
