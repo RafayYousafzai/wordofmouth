@@ -1,7 +1,7 @@
 "use client";
 
-import { Button, Card } from "@nextui-org/react";
-import { Download, Play, Star, Users, Heart } from "lucide-react";
+import { Button, Card, CardBody, Chip } from "@nextui-org/react";
+import { Download, Play, Star, Users, Heart, Sparkles } from "lucide-react";
 import Image from "next/image";
 
 export default function HeroSection() {
@@ -15,139 +15,184 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center relative overflow-hidden"
+      className="min-h-screen flex items-center relative overflow-hidden bg-gradient-to-br from-background via-background/95 to-background/90"
     >
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background/90">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#FFC94A]/10 via-transparent to-[#FFD700]/5"></div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#FFC94A]/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#FFD700]/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      {/* Enhanced Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-warning-200/20 via-transparent to-warning-300/10 dark:from-warning-400/10 dark:via-transparent dark:to-warning-500/5"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-warning-200/10 dark:bg-warning-400/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-warning-300/10 dark:bg-warning-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-warning-100/5 to-warning-200/5 dark:from-warning-600/5 dark:to-warning-700/5 rounded-full blur-3xl animate-pulse delay-500"></div>
       </div>
 
-      <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="container mx-auto px-6 py-20 relative z-10 max-w-7xl">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Left Content */}
-          <div className="space-y-10 fade-in-up">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#FFC94A]/10 to-[#FFD700]/10 border border-[#FFC94A]/20 backdrop-blur-sm">
-              <Star className="w-4 h-4 text-[#FFC94A] fill-current" />
-              <span className="text-sm font-medium text-[#FFC94A]">
-                #1 Social Food App
-              </span>
-            </div>
+          <div className="space-y-12 fade-in-up">
+            {/* Enhanced Badge */}
+            <Chip
+              startContent={<Star className="w-4 h-4 fill-current" />}
+              variant="flat"
+              color="warning"
+              size="lg"
+              className="bg-warning-50/80 dark:bg-warning-950/50 border border-warning-200/50 dark:border-warning-800/50 backdrop-blur-md text-warning-700 dark:text-warning-300 font-semibold px-4 py-2"
+            >
+              #1 Social Food App
+            </Chip>
 
             {/* Main Heading */}
-            <div className="space-y-6">
-              <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight">
-                Discover Food
-                <br />
-                Through{" "}
+            <div className="space-y-8">
+              <h1 className="text-6xl md:text-8xl font-black leading-[0.9] tracking-tight">
+                <span className="block text-foreground">Discover Food</span>
+                <span className="block text-foreground">Through </span>
                 <span className="relative inline-block">
-                  <span className="bg-gradient-to-r from-[#FFC94A] via-[#FFD700] to-[#FFC94A] bg-clip-text text-transparent animate-gradient">
+                  <span className="bg-gradient-to-r from-warning-400 via-warning-500 to-warning-600 dark:from-warning-300 dark:via-warning-400 dark:to-warning-500 bg-clip-text text-transparent animate-gradient font-black">
                     Friends
                   </span>
-                  <div className="absolute -inset-1 bg-gradient-to-r from-[#FFC94A] to-[#FFD700] blur-lg opacity-30 animate-pulse"></div>
+                  <div className="absolute -inset-2 bg-gradient-to-r from-warning-400/30 to-warning-600/30 dark:from-warning-300/20 dark:to-warning-500/20 blur-2xl opacity-60 animate-pulse"></div>
+                  <Sparkles className="absolute -top-4 -right-6 w-8 h-8 text-warning-500 dark:text-warning-400 animate-pulse" />
                 </span>
               </h1>
 
-              <p className="text-xl md:text-2xl text-default-600 max-w-xl leading-relaxed font-light">
+              <p className="text-2xl md:text-3xl text-default-600 dark:text-default-400 max-w-2xl leading-relaxed font-light">
                 Follow friends, share your meals, and explore dishes near you —
                 all in one beautiful social food experience.
               </p>
             </div>
 
-            {/* Stats */}
-            <div className="flex items-center gap-8 py-4">
-              <div className="flex items-center gap-2">
-                <Users className="w-5 h-5 text-[#FFC94A]" />
-                <span className="font-semibold">10K+ Users</span>
+            {/* Enhanced Stats */}
+            <div className="flex items-center gap-12 py-6">
+              <div className="flex items-center gap-3">
+                <div className="p-2 rounded-full bg-warning-100/80 dark:bg-warning-900/50">
+                  <Users className="w-6 h-6 text-warning-600 dark:text-warning-400" />
+                </div>
+                <div>
+                  <div className="font-bold text-xl text-foreground">10K+</div>
+                  <div className="text-sm text-default-500">Users</div>
+                </div>
               </div>
-              <div className="flex items-center gap-2">
-                <Heart className="w-5 h-5 text-[#FFC94A] fill-current" />
-                <span className="font-semibold">50K+ Reviews</span>
+              <div className="flex items-center gap-3">
+                <div className="p-2 rounded-full bg-warning-100/80 dark:bg-warning-900/50">
+                  <Heart className="w-6 h-6 text-warning-600 dark:text-warning-400 fill-current" />
+                </div>
+                <div>
+                  <div className="font-bold text-xl text-foreground">50K+</div>
+                  <div className="text-sm text-default-500">Reviews</div>
+                </div>
               </div>
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            {/* Enhanced CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 pt-6">
               <Button
                 size="lg"
                 onClick={handleDownloadClick}
-                className="bg-gradient-to-r from-[#FFC94A] to-[#FFD700] hover:from-[#FFD700] hover:to-[#FFC94A] text-black font-semibold px-10 py-3 shadow-2xl hover:shadow-[#FFC94A]/25 transition-all duration-300 hover:scale-105 rounded-2xl"
-                startContent={<Download size={22} />}
+                className="bg-gradient-to-r from-warning-400 to-warning-600 hover:from-warning-500 hover:to-warning-700 text-white font-bold px-12 py-4 h-auto shadow-2xl hover:shadow-warning-500/25 dark:hover:shadow-warning-400/25 transition-all duration-300 hover:scale-105"
+                startContent={<Download size={24} />}
+                radius="full"
               >
-                Download Free
+                <span className="text-lg">Download Free</span>
               </Button>
               <Button
                 size="lg"
                 variant="bordered"
-                className="border-2 border-[#FFC94A]/50 text-[#FFC94A] hover:bg-[#FFC94A]/10 hover:border-[#FFC94A] px-10 py-3 font-semibold transition-all duration-300 hover:scale-105 rounded-2xl backdrop-blur-sm"
-                startContent={<Play size={22} />}
+                className="border-2 border-warning-400/60 dark:border-warning-500/60 text-warning-700 dark:text-warning-300 hover:bg-warning-50 dark:hover:bg-warning-950/50 hover:border-warning-500 dark:hover:border-warning-400 px-12 py-4 h-auto font-bold transition-all duration-300 hover:scale-105 backdrop-blur-md"
+                startContent={<Play size={24} />}
+                radius="full"
               >
-                Watch Demo
+                <span className="text-lg">Watch Demo</span>
               </Button>
             </div>
           </div>
 
-          {/* Right Content - Enhanced Image Display */}
+          {/* Right Content - Fixed Phone Mockup */}
           <div className="relative flex justify-center lg:justify-end">
-            {/* Main Image Container */}
             <div className="relative group">
               {/* Floating Animation Container */}
               <div className="relative transform transition-all duration-700 hover:scale-105 animate-float">
-                {/* Glow Effect */}
-                <div className="absolute -inset-4 bg-gradient-to-r from-[#FFC94A]/20 to-[#FFD700]/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
+                {/* Enhanced Glow Effect */}
+                <div className="absolute -inset-8 bg-gradient-to-r from-warning-400/20 to-warning-600/20 dark:from-warning-300/15 dark:to-warning-500/15 rounded-[4rem] blur-3xl opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
 
-                {/* Phone Mockup Frame */}
-                <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 p-2 rounded-[3rem] shadow-2xl">
-                  {/* Screen Bezel */}
-                  <div className="bg-black rounded-[2.5rem] p-1">
-                    {/* Notch */}
-                    <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-full z-10"></div>
+                {/* Phone Mockup Frame - Fixed */}
+                <div className="relative bg-gradient-to-br from-gray-900 to-black dark:from-gray-800 dark:to-gray-900 p-3 rounded-[3.5rem] shadow-2xl">
+                  {/* Screen Container - Properly sized */}
+                  <div
+                    className="relative bg-white dark:bg-gray-100 rounded-[3rem] overflow-hidden"
+                    style={{ width: "280px", height: "580px" }}
+                  >
+                    {/* Dynamic Island/Notch - Positioned correctly */}
+                    <div className="absolute top-3 left-1/2 transform -translate-x-1/2 w-28 h-7 bg-black rounded-full z-20 flex items-center justify-center">
+                      <div className="w-14 h-1 bg-gray-800 rounded-full"></div>
+                    </div>
 
-                    {/* Screen Content */}
-                    <div className="relative overflow-hidden rounded-[2rem] bg-white">
+                    {/* App Content - Positioned below notch */}
+                    <div className="relative w-full h-full pt-12">
                       <Image
                         src="/hero.jpg"
                         alt="Word of Mouth App Interface"
-                        width={320}
-                        height={640}
-                        className="w-full h-full object-cover rounded-[2rem]"
+                        width={280}
+                        height={520}
+                        className="w-full h-full object-cover"
                         priority
                       />
 
-                      {/* Screen Overlay for better integration */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/5 via-transparent to-black/5 rounded-[2rem]"></div>
+                      {/* Subtle Screen Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-black/5"></div>
                     </div>
                   </div>
 
                   {/* Phone Reflection */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-transparent rounded-[3rem] pointer-events-none"></div>
+                  <div className="absolute inset-0 bg-gradient-to-tr from-white/20 via-transparent to-transparent rounded-[3.5rem] pointer-events-none"></div>
                 </div>
               </div>
 
-              {/* Floating UI Elements */}
+              {/* Enhanced Floating UI Elements */}
               <div className="absolute -top-8 -left-8 animate-bounce-slow">
-                <Card className="p-3 bg-white/90 backdrop-blur-sm shadow-xl border-0">
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-sm font-medium">Live Reviews</span>
-                  </div>
+                <Card className="shadow-2xl border-0 bg-background/80 backdrop-blur-xl">
+                  <CardBody className="p-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-4 h-4 bg-success-500 rounded-full animate-pulse shadow-lg shadow-success-500/50"></div>
+                      <span className="font-semibold text-foreground">
+                        Live Reviews
+                      </span>
+                    </div>
+                  </CardBody>
                 </Card>
               </div>
 
               <div className="absolute -bottom-8 -right-8 animate-bounce-slow delay-1000">
-                <Card className="p-3 bg-white/90 backdrop-blur-sm shadow-xl border-0">
-                  <div className="flex items-center gap-2">
-                    <Star className="w-4 h-4 text-[#FFC94A] fill-current" />
-                    <span className="text-sm font-medium">4.9 Rating</span>
-                  </div>
+                <Card className="shadow-2xl border-0 bg-background/80 backdrop-blur-xl">
+                  <CardBody className="p-4">
+                    <div className="flex items-center gap-3">
+                      <Star className="w-5 h-5 text-warning-500 fill-current" />
+                      <span className="font-semibold text-foreground">
+                        4.9 Rating
+                      </span>
+                    </div>
+                  </CardBody>
                 </Card>
               </div>
 
-              {/* Decorative Blobs */}
-              <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-r from-[#FFC94A]/10 to-[#FFD700]/10 rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute -bottom-20 -left-20 w-32 h-32 bg-gradient-to-r from-[#FFD700]/10 to-[#FFC94A]/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+              <div className="absolute top-1/2 -right-16 animate-bounce-slow delay-500">
+                <Card className="shadow-2xl border-0 bg-background/80 backdrop-blur-xl">
+                  <CardBody className="p-3">
+                    <div className="flex items-center gap-2">
+                      <div className="flex -space-x-2">
+                        <div className="w-6 h-6 bg-warning-400 rounded-full border-2 border-background"></div>
+                        <div className="w-6 h-6 bg-success-400 rounded-full border-2 border-background"></div>
+                        <div className="w-6 h-6 bg-primary-400 rounded-full border-2 border-background"></div>
+                      </div>
+                      <span className="text-sm font-medium text-foreground">
+                        +5K Foodies
+                      </span>
+                    </div>
+                  </CardBody>
+                </Card>
+              </div>
+
+              {/* Enhanced Decorative Elements */}
+              <div className="absolute -top-24 -right-24 w-48 h-48 bg-gradient-to-r from-warning-200/20 to-warning-400/20 dark:from-warning-600/10 dark:to-warning-800/10 rounded-full blur-3xl animate-pulse"></div>
+              <div className="absolute -bottom-24 -left-24 w-40 h-40 bg-gradient-to-r from-warning-300/20 to-warning-500/20 dark:from-warning-700/10 dark:to-warning-900/10 rounded-full blur-3xl animate-pulse delay-700"></div>
             </div>
           </div>
         </div>
@@ -160,7 +205,7 @@ export default function HeroSection() {
             transform: translateY(0px) rotate(0deg);
           }
           50% {
-            transform: translateY(-20px) rotate(1deg);
+            transform: translateY(-25px) rotate(1deg);
           }
         }
 
@@ -170,7 +215,7 @@ export default function HeroSection() {
             transform: translateY(0px);
           }
           50% {
-            transform: translateY(-10px);
+            transform: translateY(-12px);
           }
         }
 
@@ -193,18 +238,18 @@ export default function HeroSection() {
         }
 
         .animate-gradient {
-          background-size: 200% 200%;
-          animation: gradient 3s ease infinite;
+          background-size: 300% 300%;
+          animation: gradient 4s ease infinite;
         }
 
         .fade-in-up {
-          animation: fadeInUp 1s ease-out;
+          animation: fadeInUp 1.2s ease-out;
         }
 
         @keyframes fadeInUp {
           from {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(40px);
           }
           to {
             opacity: 1;
