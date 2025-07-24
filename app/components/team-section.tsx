@@ -156,31 +156,6 @@ export default function TeamSection() {
         </div>
 
         {/* Team Stats */}
-        <div className="mt-20 text-center">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-            {[
-              { value: "5+", label: "Years Experience", icon: Crown },
-              { value: "2", label: "Co-Founders", icon: Users },
-              { value: "∞", label: "Passion for Food", icon: Heart },
-            ].map((stat, index) => (
-              <div key={index} className="space-y-4 group">
-                <div className="flex justify-center">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-r from-warning-100/80 to-warning-200/80 dark:from-warning-900/50 dark:to-warning-800/50 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                    <stat.icon className="w-8 h-8 text-warning-600 dark:text-warning-400" />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <div className="text-4xl font-black text-foreground">
-                    {stat.value}
-                  </div>
-                  <div className="text-default-500 font-medium">
-                    {stat.label}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
 
       <style jsx>{`
