@@ -28,11 +28,11 @@ export default function NavigationBar() {
 
   const menuItems = [
     { name: "Home", id: "home" },
-    { name: "About", id: "about" },
-    { name: "Team", id: "team" },
-    { name: "App Features", id: "app-features" },
+    { name: "How it Works", id: "app-features" },
+    { name: "About Us", id: "about" },
+    { name: "Founders", id: "team" },
     { name: "Testimonials", id: "testimonials" },
-    { name: "Contact", id: "contact" },
+    { name: "What's Next", id: "contact" },
   ];
 
   const handleDownloadClick = () => {
@@ -180,7 +180,7 @@ export default function NavigationBar() {
               <Download size={16} className="group-hover:animate-bounce" />
             }
           >
-            <span className="relative z-10">Download App</span>
+            <span className="relative z-10">Get the App</span>
             <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </Button>
         </NavbarItem>
