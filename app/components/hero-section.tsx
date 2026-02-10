@@ -1,14 +1,14 @@
 "use client";
 
 import { Button, Card, CardBody, Chip } from "@nextui-org/react";
-import { Download, Play, Star, Users, Heart, Sparkles } from "lucide-react";
+import { Download, Star, Users, Heart, Sparkles } from "lucide-react";
 import Image from "next/image";
 
 export default function HeroSection() {
   const handleDownloadClick = () => {
     window.open(
       "https://apps.apple.com/us/app/word-of-mouth-foodie/id6744751812",
-      "_blank"
+      "_blank",
     );
   };
 
@@ -92,15 +92,6 @@ export default function HeroSection() {
                 radius="full"
               >
                 <span className="text-lg">Download Free</span>
-              </Button>
-              <Button
-                size="lg"
-                variant="bordered"
-                className="border-2 border-warning-400/60 dark:border-warning-500/60 text-warning-700 dark:text-warning-300 hover:bg-warning-50 dark:hover:bg-warning-950/50 hover:border-warning-500 dark:hover:border-warning-400 px-12 py-4 h-auto font-bold transition-all duration-300 hover:scale-105 backdrop-blur-md"
-                startContent={<Play size={24} />}
-                radius="full"
-              >
-                <span className="text-lg">Watch Demo</span>
               </Button>
             </div>
           </div>

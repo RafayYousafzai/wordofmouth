@@ -16,7 +16,7 @@ const WOMHowItWorks = () => {
             What Is Word of Mouth?
           </h1>
           <p className="text-lg md:text-xl text-[#8a7560] dark:text-gray-400 max-w-[720px] mx-auto leading-relaxed">
-            It’s like Yelp, but better. And with friends. WOM focuses on the
+            It is like Yelp, but better. And with friends. WOM focuses on the
             specific dishes you love, shared by the people you trust.
           </p>
         </section>
@@ -35,9 +35,9 @@ const WOMHowItWorks = () => {
                   Follow & Post with Friends
                 </h3>
                 <p className="text-[#8a7560] dark:text-gray-400 text-base leading-relaxed">
-                  Snap and share your latest foodie finds with your social
-                  circle instantly. See what your friends are eating right now
-                  and never miss a trending spot.
+                  Snap, share, and scroll through your friends' foodie finds.
+                  Get inspired (or just really hungry) by what everyone is
+                  eating, from taco trucks to truffle pasta.
                 </p>
               </div>
               <div className="mt-auto pt-4 flex -space-x-3">
@@ -75,9 +75,9 @@ const WOMHowItWorks = () => {
                   Review Dishes
                 </h3>
                 <p className="text-[#8a7560] dark:text-gray-400 text-base leading-relaxed">
-                  Rate the exact dish, not just the restaurant. Finally know if
-                  the Truffle Pasta is actually worth the hype before you even
-                  sit down.
+                  Dish it out literally. Rate the exact dishes you try, not just
+                  the place. Share bites, not just stars, with photos, tags, and
+                  emojis.
                 </p>
               </div>
               <div className="mt-auto pt-4">
@@ -113,9 +113,9 @@ const WOMHowItWorks = () => {
                   Tag & Filter Dishes
                 </h3>
                 <p className="text-[#8a7560] dark:text-gray-400 text-base leading-relaxed">
-                  Find exactly what you crave with hyper-specific tags. Filter
-                  by "spicy", "vegan", or even the ultimate "hangover cure"
-                  breakfast.
+                  Food is not one-size-fits-all. Use tags like "spicy", "vegan",
+                  "gluten-free", or "hangover cure" to find dishes that match
+                  your cravings and your lifestyle.
                 </p>
               </div>
               <div className="mt-auto pt-4 flex flex-wrap gap-2">
@@ -145,8 +145,9 @@ const WOMHowItWorks = () => {
                   Become a Local Food Hero
                 </h3>
                 <p className="text-[#8a7560] dark:text-gray-400 text-base leading-relaxed">
-                  Build your foodie cred, earn exclusive badges, and become the
-                  go-to expert in your city. Your recommendations carry weight.
+                  Become the go-to expert in your city. The more you post, the
+                  more your foodie cred grows and the more your recommendations
+                  help others eat better.
                 </p>
               </div>
               <div className="mt-auto pt-4 flex items-center gap-3">

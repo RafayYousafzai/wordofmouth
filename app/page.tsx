@@ -1,8 +1,8 @@
 import React from "react";
+import Link from "next/link";
 import {
   Utensils,
   BadgeCheck,
-  TrendingUp,
   Star,
   Search,
   Home,
@@ -11,8 +11,7 @@ import {
   Users,
   User,
   ThumbsUp,
-  Share2,
-  Globe,
+  MapPin,
 } from "lucide-react";
 
 const WOMHome = () => {
@@ -34,8 +33,11 @@ const WOMHome = () => {
       />
 
       {/* Hero Content Section */}
-      <main className="flex-grow flex flex-col justify-center max-w-[1280px] mx-auto px-6 lg:px-10 py-12 lg:py-24 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <main className="flex-grow flex flex-col max-w-[1280px] mx-auto px-6 lg:px-10 py-12 lg:py-24 relative z-10">
+        <section
+          id="home"
+          className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center"
+        >
           {/* Left Column: Copy and Social Proof */}
           <div className="flex flex-col items-start gap-8 order-2 lg:order-1">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#f48c25]/10 border border-[#f48c25]/20 rounded-full">
@@ -45,26 +47,28 @@ const WOMHome = () => {
                 fill="currentColor"
               />
               <span className="text-[#f48c25] text-xs font-bold uppercase tracking-wider">
-                Voted #1 Food Discovery App
+                Voted #1 Food Discovery App by Real Foodies
               </span>
             </div>
 
             <div className="flex flex-col gap-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-[#181411] dark:text-white">
-                Follow your foodie friends,{" "}
-                <span className="text-[#f48c25]">rate dishes</span>, and explore
-                real reviews.
+                Follow your foodie friends, rate dishes, and explore real
+                reviews nearby.
               </h1>
               <p className="text-lg text-[#8a7560] dark:text-gray-400 max-w-[540px] leading-relaxed">
-                Stop guessing what to order. Join a community of thousands of
-                foodies sharing authentic reviews on specific dishes at
-                restaurants near you.
+                No more mystery menus or paid reviews. Word of Mouth lets you
+                rate dishes, not restaurants, and see what your friends are
+                actually eating.
               </p>
             </div>
 
             {/* App Store Buttons */}
             <div className="flex flex-wrap gap-4 pt-2">
-              <button className="flex items-center gap-3 bg-[#181411] dark:bg-white text-white dark:text-[#181411] px-6 py-3 rounded-xl transition-transform active:scale-95 shadow-lg hover:shadow-xl">
+              <Link
+                href="/get-the-app"
+                className="flex items-center gap-3 bg-[#181411] dark:bg-white text-white dark:text-[#181411] px-6 py-3 rounded-xl transition-transform active:scale-95 shadow-lg hover:shadow-xl"
+              >
                 {/* Apple Icon SVG */}
                 <svg
                   className="w-8 h-8 fill-current"
@@ -79,9 +83,12 @@ const WOMHome = () => {
                   </span>
                   <span className="text-lg font-bold">App Store</span>
                 </div>
-              </button>
+              </Link>
 
-              <button className="flex items-center gap-3 bg-[#181411] dark:bg-white text-white dark:text-[#181411] px-6 py-3 rounded-xl transition-transform active:scale-95 shadow-lg hover:shadow-xl">
+              <Link
+                href="/get-the-app"
+                className="flex items-center gap-3 bg-[#181411] dark:bg-white text-white dark:text-[#181411] px-6 py-3 rounded-xl transition-transform active:scale-95 shadow-lg hover:shadow-xl"
+              >
                 {/* Play Store Icon SVG */}
                 <svg
                   className="w-7 h-7 fill-current"
@@ -96,28 +103,25 @@ const WOMHome = () => {
                   </span>
                   <span className="text-lg font-bold">Google Play</span>
                 </div>
-              </button>
+              </Link>
             </div>
 
             {/* Metric Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full pt-4">
               {[
                 {
-                  label: "Hungry Users",
-                  val: "10,000+",
-                  change: "15% this week",
-                  icon: TrendingUp,
+                  label: "10,000+ Hungry Foodies",
+                  subtext: "Food-lovers just like you.",
+                  icon: Users,
                 },
                 {
-                  label: "Dish Reviews",
-                  val: "50,000+",
-                  change: "22% monthly",
-                  icon: TrendingUp,
+                  label: "50,000+ Dish Reviews",
+                  subtext: "Real dishes. Real opinions.",
+                  icon: Utensils,
                 },
                 {
-                  label: "Avg Rating",
-                  val: "4.9/5",
-                  change: "Top rated app",
+                  label: "4.9/5 Star Rating",
+                  subtext: "Hot, fresh, and loved.",
                   icon: Star,
                   iconColor: "text-[#f48c25] fill-current",
                 },
@@ -126,16 +130,15 @@ const WOMHome = () => {
                   key={idx}
                   className="bg-white dark:bg-white/5 border border-[#e6e0db] dark:border-white/10 p-5 rounded-2xl shadow-sm"
                 >
-                  <p className="text-sm font-medium text-[#8a7560] dark:text-gray-400">
-                    {stat.label}
-                  </p>
-                  <h3 className="text-2xl font-extrabold mt-1">{stat.val}</h3>
-                  <div
-                    className={`flex items-center gap-1 text-[#07880e] text-xs font-bold mt-2`}
-                  >
-                    <stat.icon size={14} className={stat.iconColor || ""} />
-                    {stat.change}
+                  <div className="flex items-center gap-2 text-[#f48c25]">
+                    <stat.icon size={16} className={stat.iconColor || ""} />
+                    <p className="text-sm font-semibold text-[#181411] dark:text-white">
+                      {stat.label}
+                    </p>
                   </div>
+                  <p className="text-xs text-[#8a7560] dark:text-gray-400 mt-2">
+                    {stat.subtext}
+                  </p>
                 </div>
               ))}
             </div>
@@ -243,15 +246,253 @@ const WOMHome = () => {
               </div>
               <div>
                 <p className="text-xs font-bold text-gray-900 dark:text-white">
-                  New Review!
+                  Live Reviews
                 </p>
-                <p className="text-[10px] text-[#8a7560]">
-                  Sarah just rated "Miso Ramen"
+                <p className="text-[10px] text-[#8a7560]">4.9 Star Average</p>
+              </div>
+            </div>
+
+            <div className="absolute -bottom-6 -left-8 bg-white dark:bg-[#221910] p-3 rounded-2xl shadow-xl border border-[#e6e0db] dark:border-white/10 hidden md:flex items-center gap-2 animate-bounce-slow">
+              <div className="size-8 rounded-full bg-[#f48c25]/10 flex items-center justify-center text-[#f48c25]">
+                <Users size={16} />
+              </div>
+              <div>
+                <p className="text-xs font-bold text-gray-900 dark:text-white">
+                  5K+ Foodies
+                </p>
+                <p className="text-[10px] text-[#8a7560]">Snacking now</p>
+              </div>
+            </div>
+
+            <div className="absolute -top-6 left-10 bg-white dark:bg-[#221910] p-3 rounded-2xl shadow-xl border border-[#e6e0db] dark:border-white/10 hidden md:flex items-center gap-2 animate-bounce-slow">
+              <div className="size-8 rounded-full bg-[#f48c25]/10 flex items-center justify-center text-[#f48c25]">
+                <Star size={16} fill="currentColor" />
+              </div>
+              <div>
+                <p className="text-xs font-bold text-gray-900 dark:text-white">
+                  4.9 Star
+                </p>
+                <p className="text-[10px] text-[#8a7560]">Average</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="about"
+          className="mt-16 lg:mt-24 bg-white dark:bg-white/5 border border-[#e6e0db] dark:border-white/10 rounded-3xl p-8 lg:p-12 shadow-sm"
+        >
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            <div>
+              <p className="text-xs uppercase tracking-widest text-[#f48c25] font-bold">
+                What is Word of Mouth?
+              </p>
+              <h2 className="text-3xl lg:text-4xl font-extrabold text-[#181411] dark:text-white mt-3">
+                It is like Yelp, but better. And with friends.
+              </h2>
+              <p className="text-[#8a7560] dark:text-gray-400 mt-4 leading-relaxed">
+                No more mystery menus or paid reviews. Word of Mouth lets you
+                rate dishes, not restaurants, and see what your friends are
+                actually eating. Because trust is the tastiest ingredient.
+              </p>
+            </div>
+            <div className="grid gap-4">
+              {[
+                {
+                  title: "Help us reach 100 Foodies",
+                  body: "You are building this with us, bite by bite.",
+                  icon: Users,
+                },
+                {
+                  title: "Add to our first 1,000 reviews",
+                  body: "Every rating helps someone eat smarter.",
+                  icon: Star,
+                },
+                {
+                  title: "Live in 7 cities and expanding",
+                  body: "Want WOM in your town? Just say the word.",
+                  icon: MapPin,
+                },
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className="flex items-start gap-3 bg-[#f8f7f5] dark:bg-[#221910] border border-[#e6e0db] dark:border-white/10 rounded-2xl p-4"
+                >
+                  <div className="size-10 rounded-full bg-[#f48c25]/10 text-[#f48c25] flex items-center justify-center">
+                    <item.icon size={18} />
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold text-[#181411] dark:text-white">
+                      {item.title}
+                    </p>
+                    <p className="text-xs text-[#8a7560] dark:text-gray-400 mt-1">
+                      {item.body}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-16 lg:mt-24">
+          <div className="flex items-center justify-between flex-wrap gap-4">
+            <div>
+              <p className="text-xs uppercase tracking-widest text-[#f48c25] font-bold">
+                Meet the Minds Behind the Menu
+              </p>
+              <h2 className="text-3xl lg:text-4xl font-extrabold text-[#181411] dark:text-white mt-3">
+                Meet Our Founders
+              </h2>
+            </div>
+            <Link
+              href="/founders"
+              className="text-sm font-bold text-[#f48c25] hover:underline"
+            >
+              View full story
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 mt-8">
+            {[
+              {
+                name: "Allen",
+                role: "CEO & Co-Founder",
+                line: "Leading the Feast & Turning Appetites into Adventures",
+                dish: "Chicken Cutlet Sandwiches",
+              },
+              {
+                name: "Jorge",
+                role: "CTO & Co-Founder",
+                line: "Engineering the Future of Food, One Line at a Time",
+                dish: "Street Tacos",
+              },
+            ].map((founder) => (
+              <div
+                key={founder.name}
+                className="bg-white dark:bg-white/5 border border-[#e6e0db] dark:border-white/10 rounded-2xl p-6 shadow-sm"
+              >
+                <p className="text-lg font-bold text-[#181411] dark:text-white">
+                  {founder.name}
+                </p>
+                <p className="text-sm text-[#f48c25] font-semibold mt-1">
+                  {founder.role}
+                </p>
+                <p className="text-sm text-[#8a7560] dark:text-gray-400 mt-3">
+                  "{founder.line}"
+                </p>
+                <p className="text-xs text-[#8a7560] dark:text-gray-400 mt-4">
+                  Favorite dish to review: {founder.dish}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="testimonials" className="mt-16 lg:mt-24">
+          <div className="text-center max-w-2xl mx-auto">
+            <p className="text-xs uppercase tracking-widest text-[#f48c25] font-bold">
+              Founding Foodies
+            </p>
+            <h2 className="text-3xl lg:text-4xl font-extrabold text-[#181411] dark:text-white mt-3">
+              Early love from real diners
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 mt-10">
+            {[
+              {
+                name: "Priya S.",
+                quote:
+                  "I stopped guessing what to order. The dish-first reviews are a game changer.",
+              },
+              {
+                name: "Marco R.",
+                quote:
+                  "It feels like a private feed of my friends' best bites. Instant trust.",
+              },
+              {
+                name: "Tess L.",
+                quote:
+                  "The tags make it easy to find exactly what I am craving.",
+              },
+              {
+                name: "Jordan K.",
+                quote:
+                  "Foodies helping foodies. I have discovered three new spots already.",
+              },
+            ].map((item) => (
+              <div
+                key={item.name}
+                className="bg-white dark:bg-white/5 border border-[#e6e0db] dark:border-white/10 rounded-2xl p-6 shadow-sm"
+              >
+                <div className="flex items-center gap-2 text-[#f48c25]">
+                  {[...Array(5)].map((_, idx) => (
+                    <Star key={idx} size={14} fill="currentColor" />
+                  ))}
+                </div>
+                <p className="text-sm text-[#8a7560] dark:text-gray-400 mt-4">
+                  "{item.quote}"
+                </p>
+                <p className="text-xs font-bold text-[#181411] dark:text-white mt-4">
+                  {item.name}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="get-the-app" className="mt-16 lg:mt-24">
+          <div className="bg-[#f48c25] text-white rounded-3xl p-8 lg:p-12 shadow-2xl">
+            <div className="grid lg:grid-cols-2 gap-10 items-center">
+              <div>
+                <h2 className="text-3xl lg:text-4xl font-extrabold">
+                  Join the First 100 Foodies
+                </h2>
+                <p className="text-white/90 mt-4">
+                  You are early. We are just getting started. You are in Version
+                  1.0 - taste-testing mode. Bug spotting equals brownie points.
+                </p>
+                <ul className="mt-6 space-y-3 text-sm">
+                  <li>Track every dish you have ever loved.</li>
+                  <li>See what your inner circle is eating.</li>
+                  <li>Earn early taster badges for your profile.</li>
+                </ul>
+                <div className="flex flex-wrap gap-4 mt-8">
+                  <Link
+                    href="/get-the-app"
+                    className="bg-[#181411] text-white px-6 py-3 rounded-xl font-bold"
+                  >
+                    Download on App Store
+                  </Link>
+                  <Link
+                    href="/get-the-app"
+                    className="bg-white text-[#181411] px-6 py-3 rounded-xl font-bold"
+                  >
+                    Get it on Google Play
+                  </Link>
+                </div>
+              </div>
+              <div className="bg-white/10 border border-white/20 rounded-2xl p-6">
+                <p className="text-sm font-semibold">Stay in the loop</p>
+                <p className="text-xs text-white/80 mt-2">
+                  Get early updates as we roll out new cities and features.
+                </p>
+                <form className="mt-4 flex flex-col sm:flex-row gap-3">
+                  <input
+                    type="email"
+                    placeholder="Your email"
+                    className="flex-1 px-4 py-3 rounded-xl text-[#181411]"
+                  />
+                  <button className="bg-[#181411] text-white px-5 py-3 rounded-xl font-semibold">
+                    Join updates
+                  </button>
+                </form>
+                <p className="text-xs text-white/70 mt-3">
+                  No spam. Just the good stuff.
                 </p>
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </main>
     </div>
   );

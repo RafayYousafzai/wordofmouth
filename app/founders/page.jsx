@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import {
   Utensils,
   ChefHat,
@@ -49,7 +50,7 @@ const WOMFounders = () => {
                     Allen
                   </h3>
                   <span className="px-3 py-1 bg-[#f48c25]/10 text-[#f48c25] rounded-full text-xs font-bold uppercase tracking-wider">
-                    CEO & Vision
+                    CEO & Co-Founder
                   </span>
                 </div>
                 <p className="text-lg italic text-[#5c4d3e] dark:text-[#d1c2b4] mb-4">
@@ -59,7 +60,7 @@ const WOMFounders = () => {
                   <Utensils className="text-[#f48c25]" size={20} />
                   <p className="text-sm font-medium text-[#181411] dark:text-white">
                     <span className="text-[#8a7560] dark:text-[#a09080]">
-                      Favorite Dish:
+                      Favorite Dish to Review:
                     </span>{" "}
                     Chicken Cutlet Sandwiches
                   </p>
@@ -83,7 +84,7 @@ const WOMFounders = () => {
                     Jorge
                   </h3>
                   <span className="px-3 py-1 bg-[#f48c25]/10 text-[#f48c25] rounded-full text-xs font-bold uppercase tracking-wider">
-                    CTO & Engineering
+                    CTO & Co-Founder
                   </span>
                 </div>
                 <p className="text-lg italic text-[#5c4d3e] dark:text-[#d1c2b4] mb-4">
@@ -93,7 +94,7 @@ const WOMFounders = () => {
                   <ChefHat className="text-[#f48c25]" size={20} />
                   <p className="text-sm font-medium text-[#181411] dark:text-white">
                     <span className="text-[#8a7560] dark:text-[#a09080]">
-                      Favorite Dish:
+                      Favorite Dish to Review:
                     </span>{" "}
                     Street Tacos
                   </p>
@@ -104,7 +105,10 @@ const WOMFounders = () => {
         </section>
 
         {/* What's Next Section */}
-        <section className="relative rounded-2xl overflow-hidden py-20 px-6 md:px-12 bg-[#f48c25]/5 dark:bg-[#f48c25]/10 border border-[#f48c25]/20">
+        <section
+          id="whats-next"
+          className="relative rounded-2xl overflow-hidden py-20 px-6 md:px-12 bg-[#f48c25]/5 dark:bg-[#f48c25]/10 border border-[#f48c25]/20"
+        >
           <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
             <ChefHat size={200} className="text-[#181411] dark:text-white" />
           </div>
@@ -162,16 +166,18 @@ const WOMFounders = () => {
                 </div>
               ))}
             </div>
-
-            {/* <div className="mt-12 text-center">
-              <button className="inline-flex items-center gap-2 font-bold text-[#f48c25] hover:underline group">
-                View Detailed Roadmap
+            <div className="mt-12 text-center">
+              <Link
+                href="/#contact"
+                className="inline-flex items-center gap-2 font-bold text-[#f48c25] hover:underline group"
+              >
+                Help Shape the Next Version
                 <ArrowRight
                   size={20}
                   className="group-hover:translate-x-1 transition-transform"
                 />
-              </button>
-            </div> */}
+              </Link>
+            </div>
           </div>
         </section>
       </main>

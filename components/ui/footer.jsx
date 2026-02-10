@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Globe, MessageCircle, Utensils, Video } from "lucide-react";
 
 const Footer = () => {
@@ -23,7 +24,10 @@ const Footer = () => {
         </div>
       </section>
       {/* Footer */}
-      <footer className="bg-white dark:bg-[#221910] border-t border-[#e6e0db] dark:border-[#3d2f21] py-16 px-6">
+      <footer
+        id="contact"
+        className="bg-white dark:bg-[#221910] border-t border-[#e6e0db] dark:border-[#3d2f21] py-16 px-6"
+      >
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-3 text-[#f48c25] mb-6">
@@ -56,16 +60,38 @@ const Footer = () => {
               Company
             </h4>
             <ul className="flex flex-col gap-4 text-sm text-[#8a7560] dark:text-gray-400">
-              {["About Us", "Careers", "Press"].map((link) => (
-                <li key={link}>
-                  <a
-                    className="hover:text-[#f48c25] transition-colors"
-                    href="#"
-                  >
-                    {link}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <Link
+                  className="hover:text-[#f48c25] transition-colors"
+                  href="/#about"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="hover:text-[#f48c25] transition-colors"
+                  href="/founders"
+                >
+                  Founders
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="hover:text-[#f48c25] transition-colors"
+                  href="/#testimonials"
+                >
+                  Testimonials
+                </Link>
+              </li>
+              <li>
+                <a
+                  className="hover:text-[#f48c25] transition-colors"
+                  href="#contact"
+                >
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -74,16 +100,30 @@ const Footer = () => {
               Product
             </h4>
             <ul className="flex flex-col gap-4 text-sm text-[#8a7560] dark:text-gray-400">
-              {["How it works", "Features", "Mobile App"].map((link) => (
-                <li key={link}>
-                  <a
-                    className="hover:text-[#f48c25] transition-colors"
-                    href="#"
-                  >
-                    {link}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <Link
+                  className="hover:text-[#f48c25] transition-colors"
+                  href="/how-it-works"
+                >
+                  How it works
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="hover:text-[#f48c25] transition-colors"
+                  href="/founders#whats-next"
+                >
+                  What's next
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="hover:text-[#f48c25] transition-colors"
+                  href="/get-the-app"
+                >
+                  Get the app
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -92,18 +132,16 @@ const Footer = () => {
               Legal
             </h4>
             <ul className="flex flex-col gap-4 text-sm text-[#8a7560] dark:text-gray-400">
-              {["Privacy Policy", "Terms of Service", "Cookie Policy"].map(
-                (link) => (
-                  <li key={link}>
-                    <a
-                      className="hover:text-[#f48c25] transition-colors"
-                      href="#"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ),
-              )}
+              <li>
+                <a className="hover:text-[#f48c25] transition-colors" href="#">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-[#f48c25] transition-colors" href="#">
+                  Terms of Service
+                </a>
+              </li>
             </ul>
           </div>
         </div>

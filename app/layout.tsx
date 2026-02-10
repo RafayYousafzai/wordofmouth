@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Word of Mouth Foodie - Discover Food Through Friends",
   description:
     "Follow friends, share your meals, and explore dishes near you — all in one social food app.",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({

@@ -29,7 +29,7 @@ const WOMJoin = () => {
                     Join the First 100 Foodies
                   </h1>
                   <p className="text-lg md:text-xl font-medium opacity-90 max-w-lg">
-                    You’re in Version 1.0 – Taste-Testing Mode. Bug spotting =
+                    You're in Version 1.0 - taste-testing mode. Bug spotting =
                     brownie points. Help us build the future of food discovery.
                   </p>
                 </div>
@@ -97,6 +97,9 @@ const WOMJoin = () => {
                     </div>
                   </button>
                 </div>
+                <p className="text-sm font-semibold opacity-90">
+                  You're early. We're just getting started.
+                </p>
               </div>
 
               {/* App Preview / Illustration */}

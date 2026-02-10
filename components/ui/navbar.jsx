@@ -6,8 +6,11 @@ export default function Navbar() {
   const navItems = [
     { label: "Home", href: "/" },
     { label: "How it works", href: "/how-it-works" },
+    { label: "About Us", href: "/#about" },
     { label: "Founders", href: "/founders" },
-    { label: "Get the app", href: "/get-the-app" },
+    { label: "Testimonials", href: "/#testimonials" },
+    { label: "What's Next", href: "/founders#whats-next" },
+    { label: "Get the App", href: "/get-the-app" },
   ];
 
   return (
@@ -37,9 +40,9 @@ export default function Navbar() {
         </div>
         <Link
           href="/get-the-app"
-          className="flex min-w-[100px] cursor-pointer items-center justify-center rounded-xl h-10 px-5 bg-[#f48c25] text-white text-sm font-bold hover:bg-opacity-90 transition-all shadow-lg shadow-[#f48c25]/20 active:scale-95"
+          className="flex min-w-[120px] cursor-pointer items-center justify-center rounded-xl h-10 px-5 bg-[#f48c25] text-white text-sm font-bold hover:bg-opacity-90 transition-all shadow-lg shadow-[#f48c25]/20 active:scale-95"
         >
-          <span>Sign Up</span>
+          <span>Get the App</span>
         </Link>
       </div>
 
