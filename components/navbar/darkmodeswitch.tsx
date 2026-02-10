@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 import { useTheme as useNextTheme } from "next-themes";
 import {
   Dropdown,
