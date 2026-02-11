@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
 import { Globe, MessageCircle, Utensils, Video } from "lucide-react";
+import { Image } from "@nextui-org/react";
 
 const Footer = () => {
   return (
@@ -14,11 +16,6 @@ const Footer = () => {
             and join a community of passionate foodies.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            {/* <Link href={"/founders#get-the-app"}>
-              <button className="w-full sm:w-auto flex min-w-[200px] items-center justify-center rounded-2xl h-14 px-8 bg-[#f48c25] text-white text-base font-bold hover:scale-105 transition-all shadow-xl shadow-[#f48c25]/30 active:scale-95">
-                <span>Join the Community</span>
-              </button>
-            </Link> */}
             <Link href={"/get-the-app"}>
               <button className="w-full sm:w-auto flex min-w-[200px] items-center justify-center rounded-2xl h-14 px-8 bg-white dark:bg-[#3d2f21] border border-[#e6e0db] dark:border-transparent text-[#181411] dark:text-white text-base font-bold hover:bg-gray-50 dark:hover:bg-[#4a3a2a] transition-all active:scale-95">
                 <span>Download the App</span>
@@ -33,32 +30,34 @@ const Footer = () => {
         className="bg-white dark:bg-[#221910] border-t border-[#e6e0db] dark:border-[#3d2f21] py-16 px-6"
       >
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
-          <div className="col-span-1 md:col-span-1">
-            <div className="flex items-center gap-3 text-[#f48c25] mb-6">
-              <div className="size-8 bg-[#f48c25] rounded-lg flex items-center justify-center text-white">
-                <Utensils size={18} strokeWidth={2.5} />
+          <div className="flex items-center">
+            <div className="col-span-1 md:col-span-1">
+              <div className="flex items-center gap-3 text-[#f48c25] mb-6">
+                <Image src="/icon.png" className="h-16" />
+                <h2 className="text-xl font-black tracking-tight text-[#181411] dark:text-white">
+                  Word Of Mouth
+                  <span className="text-[10px] font-bold text-[#f48c25] uppercase tracking-widest hidden sm:block">
+                    Real Food. Real Friends.
+                  </span>
+                </h2>
               </div>
-              <h2 className="text-[#181411] dark:text-white text-xl font-extrabold tracking-tight">
-                WOM
-              </h2>
-            </div>
-            <p className="text-[#8a7560] dark:text-gray-400 text-sm leading-relaxed mb-6">
-              The social platform built for people who live to eat. Authentic
-              reviews, dish by dish.
-            </p>
-            <div className="flex gap-4">
-              {[Globe, MessageCircle, Video].map((Icon, idx) => (
-                <Link
-                  key={idx}
-                  className="text-[#8a7560] hover:text-[#f48c25] transition-colors"
-                  href="/"
-                >
-                  <Icon size={20} />
-                </Link>
-              ))}
+              <p className="text-[#8a7560] dark:text-gray-400 text-sm leading-relaxed mb-6">
+                The social platform built for people who live to eat. Authentic
+                reviews, dish by dish.
+              </p>
+              <div className="flex gap-4">
+                {[Globe, MessageCircle, Video].map((Icon, idx) => (
+                  <Link
+                    key={idx}
+                    className="text-[#8a7560] hover:text-[#f48c25] transition-colors"
+                    href="/"
+                  >
+                    <Icon size={20} />
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
-
           <div>
             <h4 className="font-bold mb-6 text-[#181411] dark:text-white">
               Company
@@ -90,7 +89,6 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
           <div>
             <h4 className="font-bold mb-6 text-[#181411] dark:text-white">
               Product
@@ -122,7 +120,6 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
           <div>
             <h4 className="font-bold mb-6 text-[#181411] dark:text-white">
               Legal
