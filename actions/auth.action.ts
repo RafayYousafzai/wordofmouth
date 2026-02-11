@@ -5,7 +5,8 @@ import { cookies } from "next/headers";
 export const createAuthCookie = async (role = "admin") => {
   // Create a token that includes the user role
   const token = JSON.stringify({ role, timestamp: Date.now() });
-  cookies().set("userAuth", token, { 
+  const cookieStore = await cookies();
+  cookieStore.set("userAuth", token, {
     secure: true,
     httpOnly: true,
     maxAge: 60 * 60 * 24 * 7 // 1 week
@@ -13,11 +14,13 @@ export const createAuthCookie = async (role = "admin") => {
 };
 
 export const deleteAuthCookie = async () => {
-  cookies().delete("userAuth");
+  const cookieStore = await cookies();
+  cookieStore.delete("userAuth");
 };
 
 export const getUserRole = async () => {
-  const authCookie = cookies().get("userAuth");
+  const cookieStore = await cookies();
+  const authCookie = cookieStore.get("userAuth");
   
   if (!authCookie || !authCookie.value) {
     return null;
