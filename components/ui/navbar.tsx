@@ -25,6 +25,7 @@ export default function Navbar() {
     { label: "Founders", href: "/#founders" },
     { label: "Testimonials", href: "/#testimonials" },
     { label: "What's Next", href: "/whats-next" },
+    { label: "Contact", href: "/contact-us" },
   ];
 
   // Smooth scroll handler for hash links
