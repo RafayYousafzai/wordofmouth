@@ -35,13 +35,13 @@ const WOMHome = () => {
       />
 
       {/* Hero Content Section */}
-      <main className="flex-grow flex flex-col max-w-[1280px] mx-auto px-6 lg:px-10 py-12 lg:py-24 relative z-10">
+      <main className="flex-grow flex flex-col max-w-[1280px] mx-auto px-6 lg:px-10 py-12 lg:py-24 relative z-10 mt-20 md:0">
         <section
           id="home"
           className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center"
         >
           {/* Left Column: Copy and Social Proof */}
-          <div className="flex flex-col items-start gap-8 order-2 lg:order-1">
+          <div className="flex flex-col items-start gap-8 order-1 lg:order-1">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#f48c25]/10 border border-[#f48c25]/20 rounded-full">
               <BadgeCheck
                 size={16}
@@ -147,7 +147,7 @@ const WOMHome = () => {
           </div>
 
           {/* Right Column: App Mockup */}
-          <div className="relative flex justify-center order-1 lg:order-2">
+          <div className="relative flex justify-center order-2 lg:order-2">
             {/* Decor Circles */}
             <div className="absolute -top-10 -right-10 w-64 h-64 bg-[#f48c25]/20 blur-[80px] rounded-full"></div>
             <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-[#f48c25]/10 blur-[60px] rounded-full"></div>
