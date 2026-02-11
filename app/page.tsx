@@ -15,7 +15,6 @@ import {
 import Founders from "@/components/founders";
 import JoinUs from "@/components/join-us/join-us-banner";
 import WhatsCooking from "@/components/whats-cooking";
-import HowItWorks from "@/components/how-it-works";
 
 const WOMHome = () => {
   // Inline styles for the background pattern to avoid external CSS files
@@ -153,93 +152,13 @@ const WOMHome = () => {
             <div className="absolute -top-10 -right-10 w-64 h-64 bg-[#f48c25]/20 blur-[80px] rounded-full"></div>
             <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-[#f48c25]/10 blur-[60px] rounded-full"></div>
 
-            {/* Mobile Mockup Container */}
-            <div className="relative w-full max-w-[320px] aspect-[9/19] bg-white dark:bg-[#1c140d] border-[8px] border-[#181411] dark:border-[#3a2f26] rounded-[3rem] shadow-2xl overflow-hidden ring-4 ring-[#f48c25]/20">
-              {/* Top Notch */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-[#181411] dark:bg-[#3a2f26] rounded-b-2xl z-20"></div>
-
-              {/* App Content Mockup */}
-              <div className="h-full flex flex-col pt-8 bg-gray-50 dark:bg-[#1c140d]">
-                {/* Header */}
-                <div className="px-5 py-4 flex items-center justify-between">
-                  <span className="text-lg font-extrabold text-[#f48c25]">
-                    WOM
-                  </span>
-                  <Search className="text-gray-800 dark:text-white" size={20} />
-                </div>
-
-                {/* Feed Scroll */}
-                <div className="flex-1 overflow-y-auto px-4 flex flex-col gap-4 pb-10 scrollbar-hide">
-                  {/* Card 1 */}
-                  <div className="bg-white dark:bg-white/5 rounded-xl border border-gray-100 dark:border-white/10 shadow-sm overflow-hidden">
-                    {/* Placeholder for Food Image */}
-                    <div className="h-40 w-full bg-gray-200 dark:bg-gray-700 relative">
-                      <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                        <Utensils size={32} />
-                      </div>
-                    </div>
-                    <div className="p-3">
-                      <div className="flex items-center justify-between mb-2">
-                        <h4 className="font-bold text-sm text-gray-900 dark:text-white">
-                          Truffle Tagliatelle
-                        </h4>
-                        <div className="flex items-center text-[#f48c25]">
-                          <Star size={12} fill="currentColor" />
-                          <span className="text-xs font-bold ml-1">4.8</span>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <div className="size-6 rounded-full bg-gray-200" />
-                        <p className="text-[10px] text-[#8a7560] dark:text-gray-400">
-                          <strong>Alex J.</strong> reviewed at Trattoria
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Card 2 */}
-                  <div className="bg-white dark:bg-white/5 rounded-xl border border-gray-100 dark:border-white/10 shadow-sm overflow-hidden">
-                    {/* Placeholder for Food Image */}
-                    <div className="h-40 w-full bg-gray-200 dark:bg-gray-700 relative">
-                      <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                        <Utensils size={32} />
-                      </div>
-                    </div>
-                    <div className="p-3">
-                      <div className="flex items-center justify-between mb-2">
-                        <h4 className="font-bold text-sm text-gray-900 dark:text-white">
-                          Spicy Al Pastor
-                        </h4>
-                        <div className="flex items-center text-[#f48c25]">
-                          <Star size={12} fill="currentColor" />
-                          <span className="text-xs font-bold ml-1">4.9</span>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <div className="size-6 rounded-full bg-gray-200" />
-                        <p className="text-[10px] text-[#8a7560] dark:text-gray-400">
-                          <strong>Maya K.</strong> reviewed at Taco House
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Nav Tab */}
-                <div className="h-16 border-t border-gray-200 dark:border-white/10 flex justify-around items-center px-4 bg-white dark:bg-[#1c140d]">
-                  <Home
-                    className="text-[#f48c25]"
-                    size={24}
-                    fill="currentColor"
-                  />
-                  <Compass className="text-gray-400" size={24} />
-                  <div className="size-10 rounded-full bg-[#f48c25] flex items-center justify-center text-white -mt-8 shadow-lg ring-4 ring-white dark:ring-[#1c140d]">
-                    <Plus size={24} />
-                  </div>
-                  <Users className="text-gray-400" size={24} />
-                  <User className="text-gray-400" size={24} />
-                </div>
-              </div>
+            {/* Hero Image */}
+            <div className="relative w-full max-w-[480px]">
+              <img
+                src="/phone-ss.png"
+                alt="Word of Mouth app screenshot"
+                className="w-full h-auto drop-shadow-2xl"
+              />
             </div>
 
             {/* Float Tag */}
@@ -281,7 +200,6 @@ const WOMHome = () => {
           </div>
         </section>
 
-        <HowItWorks />
         <section
           id="about"
           className="mt-16 lg:mt-24 bg-white dark:bg-white/5 border border-[#e6e0db] dark:border-white/10 rounded-3xl p-8 lg:p-12 shadow-sm"
@@ -339,7 +257,7 @@ const WOMHome = () => {
           </div>
         </section>
 
-        <section id="founders" className="mt-16 lg:mt-24">
+        <section className="mt-16 lg:mt-24">
           <div className="flex items-center justify-between flex-wrap gap-4 mb-10">
             <div>
               <p className="text-xs uppercase tracking-widest text-[#f48c25] font-bold">

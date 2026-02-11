@@ -25,7 +25,7 @@ export default function Founders({ headerShown = true }) {
             <img
               alt="Allen - CEO"
               className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              src="/allen.png"
             />
           </div>
           <div>
@@ -59,7 +59,7 @@ export default function Founders({ headerShown = true }) {
             <img
               alt="Jorge - CTO"
               className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              src="/jorge.avif"
             />
           </div>
           <div>
