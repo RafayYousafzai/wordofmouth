@@ -14,11 +14,11 @@ const Footer = () => {
             and join a community of passionate foodies.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href={"/founders#get-the-app"}>
+            {/* <Link href={"/founders#get-the-app"}>
               <button className="w-full sm:w-auto flex min-w-[200px] items-center justify-center rounded-2xl h-14 px-8 bg-[#f48c25] text-white text-base font-bold hover:scale-105 transition-all shadow-xl shadow-[#f48c25]/30 active:scale-95">
                 <span>Join the Community</span>
               </button>
-            </Link>
+            </Link> */}
             <Link href={"/get-the-app"}>
               <button className="w-full sm:w-auto flex min-w-[200px] items-center justify-center rounded-2xl h-14 px-8 bg-white dark:bg-[#3d2f21] border border-[#e6e0db] dark:border-transparent text-[#181411] dark:text-white text-base font-bold hover:bg-gray-50 dark:hover:bg-[#4a3a2a] transition-all active:scale-95">
                 <span>Download the App</span>

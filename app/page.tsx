@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import Founders from "@/components/founders";
 import JoinUs from "@/components/join-us/join-us-banner";
-import WhatsCooking from "@/components/whats-cooking";
+import WOMHowItWorks from "@/components/how-it-works";
 
 const WOMHome = () => {
   // Inline styles for the background pattern to avoid external CSS files
@@ -68,7 +68,7 @@ const WOMHome = () => {
             {/* App Store Buttons */}
             <div className="flex flex-wrap gap-4 pt-2">
               <Link
-                href="/get-the-app"
+                href="https://apps.apple.com/us/app/word-of-mouth-foodie/id6744751812"
                 className="flex items-center gap-3 bg-[#181411] dark:bg-white text-white dark:text-[#181411] px-6 py-3 rounded-xl transition-transform active:scale-95 shadow-lg hover:shadow-xl"
               >
                 {/* Apple Icon SVG */}
@@ -88,7 +88,7 @@ const WOMHome = () => {
               </Link>
 
               <Link
-                href="/get-the-app"
+                href="https://play.google.com/store/apps/details?id=com.wordofmouth.limited&hl=en_US"
                 className="flex items-center gap-3 bg-[#181411] dark:bg-white text-white dark:text-[#181411] px-6 py-3 rounded-xl transition-transform active:scale-95 shadow-lg hover:shadow-xl"
               >
                 {/* Play Store Icon SVG */}
@@ -138,9 +138,6 @@ const WOMHome = () => {
                       {stat.label}
                     </p>
                   </div>
-                  <p className="text-xs text-[#8a7560] dark:text-gray-400 mt-2">
-                    {stat.subtext}
-                  </p>
                 </div>
               ))}
             </div>
@@ -162,100 +159,10 @@ const WOMHome = () => {
             </div>
 
             {/* Float Tag */}
-            <div className="absolute top-24 -right-8 lg:-right-12 bg-white dark:bg-[#221910] p-4 rounded-2xl shadow-xl border border-[#e6e0db] dark:border-white/10 hidden md:flex items-center gap-3 animate-bounce-slow">
-              <div className="size-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
-                <ThumbsUp size={20} fill="currentColor" />
-              </div>
-              <div>
-                <p className="text-xs font-bold text-gray-900 dark:text-white">
-                  Live Reviews
-                </p>
-                <p className="text-[10px] text-[#8a7560]">4.9 Star Average</p>
-              </div>
-            </div>
-
-            <div className="absolute -bottom-6 -left-8 bg-white dark:bg-[#221910] p-3 rounded-2xl shadow-xl border border-[#e6e0db] dark:border-white/10 hidden md:flex items-center gap-2 animate-bounce-slow">
-              <div className="size-8 rounded-full bg-[#f48c25]/10 flex items-center justify-center text-[#f48c25]">
-                <Users size={16} />
-              </div>
-              <div>
-                <p className="text-xs font-bold text-gray-900 dark:text-white">
-                  5K+ Foodies
-                </p>
-                <p className="text-[10px] text-[#8a7560]">Snacking now</p>
-              </div>
-            </div>
-
-            <div className="absolute -top-6 left-10 bg-white dark:bg-[#221910] p-3 rounded-2xl shadow-xl border border-[#e6e0db] dark:border-white/10 hidden md:flex items-center gap-2 animate-bounce-slow">
-              <div className="size-8 rounded-full bg-[#f48c25]/10 flex items-center justify-center text-[#f48c25]">
-                <Star size={16} fill="currentColor" />
-              </div>
-              <div>
-                <p className="text-xs font-bold text-gray-900 dark:text-white">
-                  4.9 Star
-                </p>
-                <p className="text-[10px] text-[#8a7560]">Average</p>
-              </div>
-            </div>
           </div>
         </section>
 
-        <section
-          id="about"
-          className="mt-16 lg:mt-24 bg-white dark:bg-white/5 border border-[#e6e0db] dark:border-white/10 rounded-3xl p-8 lg:p-12 shadow-sm"
-        >
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
-            <div>
-              <p className="text-xs uppercase tracking-widest text-[#f48c25] font-bold">
-                What is Word of Mouth?
-              </p>
-              <h2 className="text-3xl lg:text-4xl font-extrabold text-[#181411] dark:text-white mt-3">
-                It is like Yelp, but better. And with friends.
-              </h2>
-              <p className="text-[#8a7560] dark:text-gray-400 mt-4 leading-relaxed">
-                No more mystery menus or paid reviews. Word of Mouth lets you
-                rate dishes, not restaurants, and see what your friends are
-                actually eating. Because trust is the tastiest ingredient.
-              </p>
-            </div>
-            <div className="grid gap-4">
-              {[
-                {
-                  title: "Help us reach 100 Foodies",
-                  body: "You are building this with us, bite by bite.",
-                  icon: Users,
-                },
-                {
-                  title: "Add to our first 1,000 reviews",
-                  body: "Every rating helps someone eat smarter.",
-                  icon: Star,
-                },
-                {
-                  title: "Live in 7 cities and expanding",
-                  body: "Want WOM in your town? Just say the word.",
-                  icon: MapPin,
-                },
-              ].map((item) => (
-                <div
-                  key={item.title}
-                  className="flex items-start gap-3 bg-[#f8f7f5] dark:bg-[#221910] border border-[#e6e0db] dark:border-white/10 rounded-2xl p-4"
-                >
-                  <div className="size-10 rounded-full bg-[#f48c25]/10 text-[#f48c25] flex items-center justify-center">
-                    <item.icon size={18} />
-                  </div>
-                  <div>
-                    <p className="text-sm font-bold text-[#181411] dark:text-white">
-                      {item.title}
-                    </p>
-                    <p className="text-xs text-[#8a7560] dark:text-gray-400 mt-1">
-                      {item.body}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <WOMHowItWorks />
 
         <section className="mt-16 lg:mt-24">
           <div className="flex items-center justify-between flex-wrap gap-4 mb-10">
@@ -267,18 +174,11 @@ const WOMHome = () => {
                 Meet Our Founders
               </h2>
             </div>
-            <Link
-              href="/founders"
-              className="text-sm font-bold text-[#f48c25] hover:underline"
-            >
-              View full story
-            </Link>
           </div>
           <Founders headerShown={false} />
         </section>
 
         <div className="h-24" />
-        <WhatsCooking />
 
         <section id="testimonials" className="mt-16 lg:mt-24">
           <div className="text-center max-w-2xl mx-auto">
