@@ -4,7 +4,6 @@ import DarkModeSwitch from "../navbar/darkmodeswitch";
 
 export default function Navbar() {
   const navItems = [
-    { label: "Home", href: "/" },
     { label: "How it works", href: "/how-it-works" },
     { label: "Founders", href: "/founders" },
     { label: "Testimonials", href: "/#testimonials" },
@@ -14,12 +13,11 @@ export default function Navbar() {
   return (
     <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e6e0db] dark:border-[#3d2f21] px-6 md:px-20 py-4 bg-white/80 dark:bg-[#221910]/80 backdrop-blur-md sticky top-0 z-50">
       <div className="flex items-center gap-3 text-[#f48c25]">
-        <div className="size-8 bg-[#f48c25] rounded-lg flex items-center justify-center text-white shadow-sm">
-          <Utensils size={20} strokeWidth={2.5} />
-        </div>
-        <h2 className="text-[#181411] dark:text-white text-xl font-extrabold leading-tight tracking-tight">
-          WOM
-        </h2>
+        <Link href="/" className="flex items-center gap-2">
+          <h2 className="text-[#181411] dark:text-white text-xl font-extrabold leading-tight tracking-tight">
+            Word of Mouth
+          </h2>
+        </Link>
       </div>
 
       <div className="hidden md:flex flex-1 justify-end gap-8 items-center">

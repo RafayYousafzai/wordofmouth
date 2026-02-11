@@ -17,7 +17,7 @@ export default function Founders({ headerShown = true }) {
           </p>
         </div>
       )}
-      <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+      <div className="grid md:grid-cols-2 gap-8 lg:gap-10 w-full">
         {/* Allen - CEO */}
         <div className="group relative bg-white dark:bg-[#2d2218] rounded-xl p-6 shadow-xl shadow-black/5 hover:shadow-2xl transition-all duration-300 border border-transparent hover:border-[#f48c25]/20">
           <div className="aspect-square w-full rounded-lg overflow-hidden mb-6 relative">

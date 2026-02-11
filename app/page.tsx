@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import Founders from "@/components/founders";
 import JoinUs from "@/components/join-us/join-us-banner";
+import WhatsCooking from "@/components/whats-cooking";
 
 const WOMHome = () => {
   // Inline styles for the background pattern to avoid external CSS files
@@ -355,6 +356,9 @@ const WOMHome = () => {
           </div>
           <Founders headerShown={false} />
         </section>
+
+        <div className="h-24" />
+        <WhatsCooking />
 
         <section id="testimonials" className="mt-16 lg:mt-24">
           <div className="text-center max-w-2xl mx-auto">
