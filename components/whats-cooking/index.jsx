@@ -14,14 +14,14 @@ export default function WhatsCooking() {
       {/* What's Next Section */}
       <section
         id="whats-next"
-        className="relative rounded-2xl overflow-hidden py-20 px-6 md:px-12 bg-[#f48c25]/5 dark:bg-[#f48c25]/10 border border-[#f48c25]/20"
+        className="relative h-[90vh] rounded-2xl overflow-hidden py-20 px-6 md:px-12 bg-[#f48c25]/5 dark:bg-[#f48c25]/10 border border-[#f48c25]/20"
       >
         <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
           <ChefHat size={200} className="text-[#181411] dark:text-white" />
         </div>
 
         <div className="max-w-4xl mx-auto relative z-10">
-          <div className="mb-12">
+          <div className="my-12">
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4 flex items-center gap-4 text-[#181411] dark:text-white">
               What's Cooking
               <ChefHat className="text-[#f48c25] animate-pulse" size={36} />

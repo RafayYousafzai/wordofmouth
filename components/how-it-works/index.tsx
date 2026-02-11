@@ -1,11 +1,14 @@
 import { Sparkles, Users, Star, Tags, Medal, Trophy } from "lucide-react";
 
-const WOMHowItWorks = () => {
+export const WOMHowItWorks = () => {
   return (
     <div className="font-sans text-[#181411] dark:text-white bg-[#f8f7f5] dark:bg-[#221910] antialiased transition-colors duration-300 min-h-screen flex flex-col relative overflow-x-hidden">
       <main className="flex-1">
         {/* Hero/Intro Section */}
-        <section className="max-w-[1200px] mx-auto px-6 py-16 md:py-24 text-center">
+        <section
+          id="how-it-works"
+          className="max-w-[1200px] mx-auto px-6 py-16 md:py-24 text-center"
+        >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#f48c25]/10 text-[#f48c25] mb-6 border border-[#f48c25]/20">
             <Sparkles size={14} fill="currentColor" />
             <span className="text-xs font-bold uppercase tracking-wider">

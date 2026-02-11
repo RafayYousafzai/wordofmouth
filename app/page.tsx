@@ -15,6 +15,7 @@ import {
 import Founders from "@/components/founders";
 import JoinUs from "@/components/join-us/join-us-banner";
 import WhatsCooking from "@/components/whats-cooking";
+import HowItWorks from "@/components/how-it-works";
 
 const WOMHome = () => {
   // Inline styles for the background pattern to avoid external CSS files
@@ -280,6 +281,7 @@ const WOMHome = () => {
           </div>
         </section>
 
+        <HowItWorks />
         <section
           id="about"
           className="mt-16 lg:mt-24 bg-white dark:bg-white/5 border border-[#e6e0db] dark:border-white/10 rounded-3xl p-8 lg:p-12 shadow-sm"
@@ -337,7 +339,7 @@ const WOMHome = () => {
           </div>
         </section>
 
-        <section className="mt-16 lg:mt-24">
+        <section id="founders" className="mt-16 lg:mt-24">
           <div className="flex items-center justify-between flex-wrap gap-4 mb-10">
             <div>
               <p className="text-xs uppercase tracking-widest text-[#f48c25] font-bold">
