@@ -9,7 +9,7 @@ export const createAuthCookie = async (role = "admin") => {
   cookieStore.set("userAuth", token, {
     secure: true,
     httpOnly: true,
-    maxAge: 60 * 60 * 24 * 7 // 1 week
+    maxAge: 60 * 60 * 24 * 7, // 1 week
   });
 };
 
@@ -21,11 +21,11 @@ export const deleteAuthCookie = async () => {
 export const getUserRole = async () => {
   const cookieStore = await cookies();
   const authCookie = cookieStore.get("userAuth");
-  
+
   if (!authCookie || !authCookie.value) {
     return null;
   }
-  
+
   try {
     const userData = JSON.parse(authCookie.value);
     return userData.role;
