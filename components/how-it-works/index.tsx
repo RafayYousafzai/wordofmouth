@@ -92,7 +92,7 @@ export const WOMHowItWorks = () => {
   ];
 
   return (
-    <div className="w-full my-16 py-16">
+    <div id="how-it-works" className="w-full my-16 py-16">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="text-center mb-10 md:mb-12">

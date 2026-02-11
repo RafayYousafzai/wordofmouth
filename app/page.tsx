@@ -164,7 +164,7 @@ const WOMHome = () => {
 
         <WOMHowItWorks />
 
-        <section className="mt-16 lg:mt-24">
+        <section id="founders" className="mt-16 lg:mt-24">
           <div className="flex items-center justify-between flex-wrap gap-4 mb-10">
             <div>
               <p className="text-xs uppercase tracking-widest text-[#f48c25] font-bold">
