@@ -6,11 +6,9 @@ export default function Navbar() {
   const navItems = [
     { label: "Home", href: "/" },
     { label: "How it works", href: "/how-it-works" },
-    { label: "About Us", href: "/#about" },
     { label: "Founders", href: "/founders" },
     { label: "Testimonials", href: "/#testimonials" },
     { label: "What's Next", href: "/founders#whats-next" },
-    { label: "Get the App", href: "/get-the-app" },
   ];
 
   return (
@@ -26,8 +24,6 @@ export default function Navbar() {
 
       <div className="hidden md:flex flex-1 justify-end gap-8 items-center">
         <div className="flex items-center gap-9">
-          <DarkModeSwitch />
-
           {navItems.map((item) => (
             <Link
               key={item.label}
@@ -38,6 +34,7 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
+        <DarkModeSwitch />
         <Link
           href="/get-the-app"
           className="flex min-w-[120px] cursor-pointer items-center justify-center rounded-xl h-10 px-5 bg-[#f48c25] text-white text-sm font-bold hover:bg-opacity-90 transition-all shadow-lg shadow-[#f48c25]/20 active:scale-95"

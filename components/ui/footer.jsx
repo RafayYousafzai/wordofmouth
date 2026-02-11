@@ -63,14 +63,6 @@ const Footer = () => {
               <li>
                 <Link
                   className="hover:text-[#f48c25] transition-colors"
-                  href="/#about"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="hover:text-[#f48c25] transition-colors"
                   href="/founders"
                 >
                   Founders
@@ -147,7 +139,7 @@ const Footer = () => {
         </div>
 
         <div className="max-w-[1200px] mx-auto mt-16 pt-8 border-t border-[#e6e0db] dark:border-[#3d2f21] text-center text-sm text-[#8a7560] dark:text-gray-500">
-          © 2024 WOM (Word of Mouth). All rights reserved. Made for foodies.
+          © 2026 WOM (Word of Mouth). All rights reserved. Made for foodies.
         </div>
       </footer>
     </>
